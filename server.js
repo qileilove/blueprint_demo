@@ -20,5 +20,13 @@ app.get('/notes', function(request, response) {
 		body: "Fix garage door"
 	}]);
 });
-
+app.get('/users/:id', function (req, res) {
+    res.json(
+        {
+            "id":req.params.id,
+            "name":"seven",
+            "desc":"for test"
+        }
+    );  });
+  
 var server = app.listen(8089);
